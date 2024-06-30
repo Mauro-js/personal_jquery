@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hola Capo</title>
+    </head>
+    <body style="display: flex; flex-direction: column; margin-left: 40%; margin-right: 40%;">
+            <h1>Hola</h1>
+            <button>Go go go</button>
+            <ul>
+                <li>Uno</li>
+                <li>Dos</li>
+                <li>Tres</li>
+            </ul>
+            <p id="mensaje" style="opacity: 0">
+                Mostrar este mensaje al hacer click
+            </p>
+
+        <script src="./index.js" />
+    </body>
+    <script>
+        $(() => {
+            $('button')
+        .css('background', '#09f')
+        .css('border', '#fff')
+        .css({
+            padding: '16px',
+            borderRadius: '4px'
+        })
+        .on('click', () => {
+            $('#mensaje').fadeIn()
+        });
+
+    $('li').each((index, el) => {
+        if (index === 0) $(el).css('color', '#09f');
+        if (index === 1) $(el).css('color', 'red');
+        if (index === 2) $(el).css('color', 'green');
+    })
+            })
+    </script>
+</html>
